@@ -34,3 +34,8 @@ img.thumbnail{
 	display: block;
 	margin: auto;
 }
+
+a.header-link{
+	color: #EEEEEE;
+	padding-right: 10px;
+}
