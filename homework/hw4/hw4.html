@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework1</title>
+    <!-- Loading Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="row jumbotron">
+    <div class="container col-lg-10 col-lg-offset-1 col-xs-10 col-xs-offset-1">
+        <div class="container col-lg-12 col-md-12">
+            <h3 class="text-center">Homework 4</h3>
+
+            <div>
+
+                <!--Homework1-1-->
+                <div class="container">
+                    <p>1.</p>
+                    <p>Q: Give the SELECT command to answer the question Who will go to the party held in Peking University?
+                    </p>
+
+                    <div class="container well">
+                    <p>A:</p>
+                    <pre>
+SELECT guest.Guest_Name
+FROM guest, party, guest_party
+WHERE party.Party_Num=guest_party.Party_Num
+AND guest_party.Guest_Num=guest.Guest_Num
+AND party.Place='Peking University';</pre>
+                    </div>
+                </div>
+
+                <!--Homework1-2-->
+                <div class="container">
+                    <p>2.</p>
+                    <p>Q: Figure out a way to obtain the column labels returned by mysql_fetch_array.
+                    </p>
+                    <div class="container well">
+                        <p>A:</p>
+                        <p></p>
+                    </div>
+                </div>
+
+
+                <!--Homework1-3-->
+                <div class="container">
+                    <p>3.</p>
+                    <p>Q: Tell the difference between a CGI program and a PHP program executed by a Web Server.
+                    </p>
+
+                    <div class="container well">
+                        <p>A:</p>
+                        <p>PHP script is embedded in HTML documents, and is processed by an Apache module upon requested, of which the result replaces the script and forms a complete HTML document. CGI program is invoked by Apache upon requested, and they use a predefined method to communicate. Apache reads output from the CGI program and regards it as a complete document. CGI program can be written in any language and executed in any method.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</body>
+
+</html>
