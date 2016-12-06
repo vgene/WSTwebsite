@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="cookbook.xsl"?>
+<cookbook>
+  <recipe>
+    <name>Rhubarb and Custard</name>
+    <ingredient>
+      <name>Milk</name>
+      <amount>15</amount>
+      <unit>ml</unit>
+    </ingredient>
+    <ingredient>
+      <name>Rhubarb</name>
+      <amount>700</amount>
+      <unit>g</unit>
+    </ingredient>
+    <ingredient>
+      <name>Custard Powder</name>
+      <amount>8</amount>
+      <unit>tbs</unit>
+    </ingredient>
+    <preparation>Mix together and put in oven proof dish</preparation>
+    <cooking>Heat in a moderate oven for 40 mins</cooking>
+  </recipe>
+
+  <recipe>
+    <name>Fried Chicken</name>
+    <ingredient>
+      <name>Chilken</name>
+      <amount>500</amount>
+      <unit>g</unit>
+    </ingredient>
+    <ingredient>
+      <name>Salt</name>
+      <amount>10</amount>
+      <unit>g</unit>
+    </ingredient> 
+    <ingredient>
+      <name>Pepper</name>
+      <amount>5</amount>
+      <unit>g</unit>
+    </ingredient>
+    <ingredient>
+      <name>Ground Pepper</name>
+      <amount>5</amount>
+      <unit>g</unit>
+    </ingredient>
+    <ingredient>
+      <name>Oil</name>
+      <amount>25</amount>
+      <unit>g</unit>
+    </ingredient>
+    <preparation>Steep chilken with salt water</preparation>
+    <cooking>Fry on the pan to gold yellow, and apply all other ingredients</cooking>
+  </recipe>
+
+</cookbook>
+

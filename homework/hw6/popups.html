@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Loading Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+   <title>Popups</title>
+   <script language="javascript">
+   <!--
+   // Using Functions
+      function startupalert() { // ALERT 
+        window.alert("window.status is deprecated and has been elimiated on most of modern browsers.\n" +"Therefore I implement a fake side bar instead." );
+      }
+   
+      function askRedirect() { // CONFIRM 
+        if (!confirm("Do redirection?")) {
+          window.alert("You cancelled it.");
+        } else { //PROMPT       
+          var loc = prompt("URL:", "https://www.google.com/");
+          if (loc!=null) 
+            location = loc;
+          else{
+            window.alert("You cancelled it.");
+          }
+        }
+      }
+   -->
+   </script>
+</head>
+
+
+<body>
+  
+  <div class="row jumbotron">
+    <div class="container col-lg-10 col-lg-offset-1 col-xs-10 col-xs-offset-1">
+
+        <h2>Javascript - Homework 3: popups.html</h2>
+        <div class="container col-lg-12 col-md-12">
+
+        <a href="#" onMouseOver="document.getElementById('statusBar').innerHTML = 'Off to the Lemon';"
+            onMouseOut="document.getElementById('statusBar').innerHTML='';" >The Lemon</a>
+        or
+        <a href="#" onMouseOver="document.getElementById('statusBar').innerHTML='Ah.... I see that you prefer the lime'; return true;"
+                    onMouseOut="document.getElementById('statusBar').innerHTML='';">the Lime</a>?
+
+            <p style="text-align:center"> <a href="#" onClick = "askRedirect(); return false"> Click me to redirect</a></p>
+        </div>
+
+        <div class="container">
+        <a href="../hw6.html" class="btn btn-info" role="button">Go Back</a>
+        </div>
+
+
+        <div class="container" id="statusBar">
+        </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+
+
+</html>
+
+

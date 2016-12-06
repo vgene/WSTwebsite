@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Loading Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+   <title>Wizard Form</title>
+   <script language="javascript">
+   <!--
+   // Investigating a Form
+   function checkSubmit() {
+     var form = document.quiz;
+     var ageReg = new RegExp("^[1-9]+[0-9]*$");
+      var nameReg = new RegExp("^[A-Za-z]{1,25}$");
+
+      if(form.Personal_FirstName.value=="" || !nameReg.test(form.Personal_FirstName.value)){
+        alert("Please input your correct first name.");
+        form.Personal_FirstName.focus();
+        return false;
+      }if(form.Personal_LastName.value=="" || !nameReg.test(form.Personal_LastName.value)){
+        alert("Please input your correct last name.");
+        form.Personal_LastName.focus();
+        return false;
+      }else if(form.Personal_Age.value==""){
+        alert("Please input your age.");
+        form.Personal_Age.focus();
+        return false;
+      }else if(!ageReg.test(form.Personal_Age.value) || form.Personal_Age.value > 150 || form.Personal_Age.value < 5){
+        alert("Please input your age in integer between 5 ~ 150");
+        form.Personal_Age.focus();
+        return false;
+      }else if(form.Personal_IDNumber.value==""){
+        alert("Please input your ID Number.");
+        form.Personal_IDNumber.focus();
+        return false;
+      }else if(form.chat.value==""){
+        alert("Please leave a message to me.");
+        form.chat.focus();
+        return false;
+      }else
+        return confirm("Please check your information before submit.");
+    }
+   -->
+   </script>
+</head>
+
+
+<body>
+  
+  <div class="row jumbotron">
+    <div class="container col-lg-10 col-lg-offset-1 col-xs-10 col-xs-offset-1">
+
+        <h2>Javascript - Homework 5: wizardForm.html</h2>
+        <div class="container col-lg-12 col-md-12">
+
+          <H1>Form 2 Wizard</H1>
+          <HR>
+          <H2>A dummy form created with MS FrontPage</H2>
+          <p>(Handlers added by hand)</p>
+
+          <form action="/cgi-bin/dump.pl" onSubmit="return checkSubmit();"  method="GET" name="quiz">
+          <OL>
+          <LI><P>Please identify and describe yourself:</P>
+          <TABLE>
+          <TR>
+          <TD ALIGN="right"><EM>First Name</EM></TD>
+          <TD><INPUT TYPE=TEXT NAME="Personal_FirstName" SIZE=25></TD>
+          </TR><TR>
+          <TD ALIGN="right"><EM>Last Name</EM></TD>
+          <TD><INPUT TYPE=TEXT NAME="Personal_LastName" SIZE=25></TD>
+          </TR><TR>
+          <TD ALIGN="right"><EM>Age</EM></TD>
+          <TD><INPUT TYPE=TEXT NAME="Personal_Age" SIZE=3 MAXLENGTH=3></TD>
+          </TR><TR>
+          <TD ALIGN="right"><EM>Sex</EM></TD>
+          <TD><INPUT TYPE=RADIO NAME="Personal_Sex" VALUE="Male" CHECKED>Male 
+          <INPUT TYPE=RADIO NAME="Personal_Sex" VALUE="Female">Female</TD>
+          </TR><TR>
+          <TD ALIGN="right"><EM>ID Number</EM></TD>
+          <TD><INPUT TYPE=TEXT NAME="Personal_IDNumber" SIZE=16 MAXLENGTH=16></TD>
+          </TR>
+          </TABLE>
+
+          <LI><P>Choose one of the following options:</P>
+          <P><INPUT TYPE=RADIO NAME="watch" VALUE="Dunno" CHECKED> I don't know?!
+          <BR><INPUT TYPE=RADIO NAME="watch" VALUE="Radio"> Radio
+          <BR><INPUT TYPE=RADIO NAME="watch" VALUE="TV"> TV
+          <BR><INPUT TYPE=RADIO NAME="watch" VALUE="Film"> Film
+          <BR><BR>
+          </P>
+
+          <LI><P>Choose one of the following options:</P>
+          <P><SELECT NAME="holiday">
+            <OPTION value="Greece" SELECTED>Greece <OPTION value="Italy">Italy 
+            <OPTION value="France">France <OPTION value="Spain">Spain
+          </SELECT>
+          <BR>
+          </P>
+          <LI><P>How would you rate your knowledge of JavaScript?</P>
+          <P>
+            <INPUT TYPE=RADIO NAME="knowledge" VALUE="1" onClick="alert('Time for some SERIOUS learning');">1
+            <INPUT TYPE=RADIO NAME="knowledge" VALUE="2" onClick="alert('I hope you\'re yearning for some learning');">2
+            <INPUT TYPE=RADIO NAME="knowledge" VALUE="3" CHECKED>3
+            <INPUT TYPE=RADIO NAME="knowledge" VALUE="4">4
+            <INPUT TYPE=RADIO NAME="knowledge" VALUE="5">5 
+            <BR></P>
+          </OL>
+          <p />
+          <textarea name="chat" rows=5 cols=40></textarea><p />
+          <INPUT TYPE=button VALUE="Don't Push Me" name="push" onClick="alert('HOW RUDE!!!!\nI asked you NOT to push me');">
+          <INPUT TYPE=SUBMIT VALUE="Submit Form">
+          <INPUT TYPE=RESET VALUE="Reset Form" onClick="return confirm('Are you sure?');">
+
+          </FORM>
+
+          <HR>
+          <H5>Jazz Jezebel. Copyright © 1909 [Ten Bellies]. No rights reserved. Revised: 2002</H5>
+        <div>
+        <a href="../hw6.html" class="btn btn-info" role="button">Go Back</a>
+        </div>
+
+
+        <div class="container" id="statusBar">
+        </div>
+    </div>
+  </div>
+
+
+
+
+</body>
+
+
+</html>
+
+

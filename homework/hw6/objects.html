@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Loading Bootstrap -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+   <title>Objects</title>
+  <script language="javascript">
+   <!--
+   // Objects
+   
+   var tourOperator = "Ten Bellies Tours"; // a global variable
+   var holList = [];
+   
+   // An object IS a function
+  function Holiday(destination, duration, cost) {
+    this.destination = destination; //"this" used in same sense as Java
+    this.duration    = duration;
+    this.cost        = cost;
+    this.agent       = tourOperator;     
+  }
+   
+  function makeHoliday(dest, dur, cost) {
+    hol = new Holiday(dest, dur, cost);
+
+    holList.push(hol);
+    showHolidays();
+   }
+
+  function outputObject(anObject) {
+    var rtnstr="";
+    for (f in anObject) {
+      rtnstr += f + " = " + anObject[f] + "<br/>";
+    }
+
+    return rtnstr;
+  }
+ 
+  function showHolidays() {
+    var output="";
+    for ( var i=0; i<holList.length; i++){
+      output += "<div>"+"<p>--------</p>"+"<p>Number "+(i+1)+"</p>"+outputObject(holList[i])+"<div/>";
+    }
+    document.getElementById("show").innerHTML = output;
+  }
+
+  function addHoliday() {
+    var dest = document.getElementById("dest").value;
+    var dur = document.getElementById("dur").value;
+    var cost = document.getElementById("cost").value;
+    if (dest == "") dest = "-";
+    if (dur == "") dur = "-";
+    if (cost == "") cost = "-";
+    makeHoliday(dest, dur, cost);
+  }
+
+   -->
+   </script>
+</head>
+
+
+<body>
+  
+  <div class="row jumbotron">
+    <div class="container col-lg-10 col-lg-offset-1 col-xs-10 col-xs-offset-1">
+
+        <h2>Javascript - Homework 4: objects.html</h2>
+        <div class="container col-lg-12 col-md-12">
+
+          <form>
+            <div class="form-group form-group-lg">
+            <label for="dest">Destination</label>
+            <input class="input" type = "text" id = "dest" value = "Singapore" maxlength="20" />
+            </div> 
+            <div class="form-group form-group-lg">
+            <label for="dur">Duration</label>
+            <input class="input" type = "text" id = "dur" value = "10 Weeks" maxlength="20" /> <br />
+            </div> 
+            <div class="form-group form-group-lg">
+            <label for="cost">Cost</label>
+            <input class="input" type = "text" id = "cost" value = "$9990"/>
+            </div>
+            <input type = "button" class="btn btn-primary" value = "Add a schedule" onclick = "addHoliday()" />
+          </form>
+        </div>
+
+        <div class="container" id="show">
+        </div>
+
+        <div class="container">
+        <a href="../hw6.html" class="btn btn-info" role="button">Go Back</a>
+        </div>
+
+    </div>
+  </div>
+
+
+
+
+</body>
+
+
+</html>
+
+

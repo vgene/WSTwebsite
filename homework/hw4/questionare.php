@@ -6,90 +6,91 @@
     <title>Homework4</title>
     <!-- Loading Bootstrap -->
     <!-- <link href="../css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="hw4.css" rel="stylesheet">
     <script type="text/javascript" src="hw4.js"></script>
     <style>
-    body {
-        margin:0;
-        padding:0;
-        width: 100%;
-        height: 100%;
-    }
+        body {
+            margin:0;
+            padding:0;
+            width: 100%;
+            height: 100%;
+        }
 
 
-    div.header {
-        background-color: #262626;
-        margin: 0;
-        padding-left: 15px;
-        padding-top: 40px;
-        padding-bottom: 20px;
-        clear: both;
-    }
+        div.header {
+            background-color: #262626;
+            margin: 0;
+            padding-left: 15px;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            clear: both;
+        }
 
-    #questionare{
-        width:40%;
-        float: left;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        padding-left: 5%;
-        padding-right: 5%;
-    }
+        #questionare{
+            width:40%;
+            float: left;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
 
-    #result{
-        width:40%;
-        float: right;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        padding-left: 5%;
-        padding-right: 5%;
-    }
+        #result{
+            width:40%;
+            float: right;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
 
-    div.footer {
-        background-color: #262626;
-        clear: both;
-        text-align: center;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
+        div.footer {
+            background-color: #262626;
+            clear: both;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
 
-    label.form-label{
-        margin-bottom: 15px;
-        margin-top: 15px;
-        display: block;
-    }
+        label.form-label{
+            margin-bottom: 15px;
+            margin-top: 15px;
+            display: block;
+        }
 
-    input[type="submit"]{
-        background-color: #737373;
-        color: white;
-        padding: 10px;
-        margin: 10px;
-    }
+        input[type="submit"]{
+            background-color: #737373;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+        }
 
-    input[type="text"]{
-        width: 60%;
-        margin: 0;
-        padding: 10px;
-        box-sizing: border-box;
-        display: block;
-    }
+        input[type="text"]{
+            width: 60%;
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+            display: block;
+        }
 
-    form{
-        display: inline;
-    }
+        form{
+            display: inline;
+        }
 
-    table, th, td
-    {
-        color: #666666;
-        border: 1px solid black;
-        border-collapse: collapse;
-        font-family: helvetica;
-        font-size: 100%;
-    }
+        table, th, td
+        {
+            color: #666666;
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-family: helvetica;
+            font-size: 100%;
+        }
 
-    th, td
-    {
-        padding: 10px;
-    }
+        th, td
+        {
+            padding: 10px;
+        }
 
 
     </style>
@@ -103,7 +104,7 @@
     <h2>Survey Questionare</h2>
     <a class="header-link" href="../../index.html">Back To Homepage</a>
     <a class="header-link" href="hw4.html">Part1</a>
-    <a class="header-link" href="questionare.html">Part2(questionare,this page)</a>
+    <a class="header-link" href="questionare.php">Part2(questionare,this page)</a>
     </div>
     
     <div id="questionare">

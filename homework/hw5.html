@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework5</title>
+    <!-- Loading Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="row jumbotron">
+    <div class="container col-lg-10 col-lg-offset-1 col-xs-10 col-xs-offset-1">
+        <div class="container col-lg-12 col-md-12">
+            <h3 class="text-center">Homework 5</h3>
+
+            <div>
+
+                <!--Homework5-1-->
+                <div class="container">
+                    <p>1.</p>
+                    <p>Screen Shots
+                    </p>
+                    <div class="container well">
+                        <img class="img img-thumbnail" src="../img/ss2.png" alt="Screen Shot 2">
+                        <img class="img img-thumbnail" src="../img/ss4.png" alt="Screen Shot 4">
+                    </div>
+                </div>
+
+                <!--Homework5-2-->
+                <div class="container">
+                    <p>2.</p>
+                    <p>Code(Replacing the BufferedReader with a Scanner)
+                    </p>
+                    <div class="container well">
+                        <h2>Main.class</h2>
+                        <pre>
+package internetics;
+
+public class Main {
+
+    public static void main(String[] args) {
+        new internetics.Sample("y2016g112").show();
+    }
+}                  
+                        </pre>
+                        <h2>Sample.class</h2>
+                        <pre>
+/*
+ * Modify by Ziyang Xu NOV 6.
+ */
+
+package internetics;
+
+/**
+ * @author  Julia
+ * @version 1.2
+ */
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+import java.util.Scanner;
+// import com.ralph.*;
+
+public class Sample extends JFrame
+        implements ActionListener{
+
+    private JButton jButton1;  // this button is for pressing
+    private JLabel jLabel1;
+    private String name;
+    private Scanner input;
+
+    /** Creates new object ChooseFile */
+    public Sample() {
+        initComponents();
+        name = "";
+        selectInput();
+    }
+
+    public Sample(String name) {
+        this();
+        this.name = name;
+    }
+
+    private void initComponents() {
+        Color bright = Color.red;
+        jButton1 = new JButton();
+        jLabel1= new JLabel();
+
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent evt) {
+                exitForm(evt);
+            }
+        });
+        getContentPane().setLayout(new java.awt.GridLayout(2, 1));
+        jButton1.setBackground(Color.white);
+        jButton1.setFont(new Font("Verdana", 1, 12));
+        jButton1.setForeground(bright);
+        jButton1.addActionListener(this);
+        jButton1.setText("Click Me!");
+        jLabel1.setFont(new Font("Verdana", 1, 18));
+        jLabel1.setText("y2016g112");
+        jLabel1.setOpaque(true);
+        getContentPane().add(jButton1);
+        getContentPane().add(jLabel1);
+        pack();
+    };
+
+    public void actionPerformed(ActionEvent evt) {
+        System.out.print("Talk to me " +name+ " : ");
+        jLabel1.setText(input.nextLine());
+    }
+
+    /** Exit this Application */
+    private void exitForm(WindowEvent evt) {
+        System.exit(0);
+    }
+
+    /** Initialise and Buffer input Stream */
+    private void selectInput() {
+        input = new Scanner(new InputStreamReader(System.in));
+    }
+
+    /** Getter for name prompt */
+    public String getName() {
+        return name;
+    }
+
+    /** Setter for name prompt */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+}
+                        </pre>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</body>
+
+</html>

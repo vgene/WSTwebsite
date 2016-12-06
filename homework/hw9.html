@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework9</title>
+    <!-- Loading Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="row jumbotron">
+    <div class="container col-lg-10 col-lg-offset-1 col-xs-10 col-xs-offset-1">
+        <div class="container col-lg-12 col-md-12">
+            <h3 class="text-center">Homework 9</h3>
+
+            <div>
+
+                <!--Homework8-1-->
+                <div class="container">
+                    <h2>Homework 1</h2>
+                    <p>Survey with Play Framework</p>
+                    <div class="container well">
+                        <p>
+                            <a href="http://162.105.146.180:9112/">Checkout</a>
+                        </p>
+
+                        <p>
+                            Brief Introduction:
+                            This questionare is implemented using MVC development model.
+
+                            Model: Person.java in app/Models, has attributes like id, name,age, gender, email.
+                            The Model part uses Ebean API and H2 in memory database to implement, so the SQL create and update part is hidden from user.
+                            View: Views use scala to implement. "index.scala.html", "main.scala.html" in app/views are two main view templates, person list is loaded dynamically onto page using AJAX technique.
+                            Controller: HomeController.java in app/controllers, has methods like addPerson, deletePersons, getPersons, provide API to add, query and delele person information in the database.
+                        </p>
+                    </div>
+                </div>
+
+                <!--Homework8-2-->
+                <div class="container">
+                    <h2>Homework 2</h2>
+                    <p>Survey with Play Framework(Apache Host)</p>
+                    <div class="container well">
+                        <p>
+                            Add Proxy Module by compiling it seperately, and change 'conf/httpd.conf'.
+                            <a href="http://162.105.146.18:8612/">Checkout Here</a>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</body>
+
+</html>
